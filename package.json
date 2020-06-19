@@ -11,6 +11,7 @@
     "test": "nyc --reporter=lcov ava-ts --verbose && gulp",
     "clean": "npx rimraf dist coverage",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prepare": "npx rimraf dist && ava-ts && ngc && gulp",
     "prepublish": "npx rimraf dist && ava-ts && ngc && gulp"
   },
   "ava": {
